@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext'; // Import the useAuth hook
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import { useVisit } from '../context/VisitContext';
 
 import PaymentMethods from '../components/UI/Icons/PaymentMethods';
 import { formatCurrency } from '../helpers/common';

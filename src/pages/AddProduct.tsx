@@ -39,7 +39,7 @@ const AddProduct: React.FC = () => {
   const { user } = useAuth();
   const { contentTypes, loading: contentLoading } = useContent(); // Get contentTypes from context
 
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentPage] = useState<number>(1);
   const [pageSize] = useState<number>(10);
   const [contentTypeId, setContentTypeId] = useState<number>(0);
   const [contentType, setContentType] = useState<string>('');

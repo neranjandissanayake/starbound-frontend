@@ -1,4 +1,3 @@
-import EyeIcon from '../components/UI/Icons/Eye';
 import { ReactNode } from 'react';
 import Heart from '../components/UI/Icons/Heart';
 import Cart from '../components/UI/Icons/Cart';

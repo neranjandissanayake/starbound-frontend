@@ -57,7 +57,6 @@ export interface ContentTypes {
 
 // Define the ContentContextType type
 export interface ContentContextTypes {
-  map(arg0: (contentType: any) => boolean): unknown;
   contentTypes: ContentTypes | null;
   loading: boolean;
 }
@@ -124,6 +123,9 @@ interface CommonParams {
 }
 
 export interface Post extends CommonParams {
+  likes: number;
+  comments: number;
+  views: number;
   id: number;
   categories: Category[];
   author: Author;

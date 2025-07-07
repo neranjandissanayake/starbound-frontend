@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { Image, Product, Visit, VisitProps } from '../types/types'; // Adjust the import path as necessary
+import { Image, Product, Visit } from '../types/types'; // Adjust the import path as necessary
 import axiosInstance from './AxiosInstance';
 import axiosInstanceNoAuth from './AxiosInstanceNoAuth';
 import {
@@ -757,7 +757,7 @@ export const isFetchError = (error: any): error is RTCError => {
   return typeof error.status === 'number' && typeof error.message === 'string';
 };
 
-export const createVisit = async (payload: VisitProps): Promise<any> => {
+export const createVisit = async (payload: Visit): Promise<any> => {
   try {
     const response = await axiosInstance.post('/visits/', payload);
     return response.data;

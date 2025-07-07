@@ -1,10 +1,7 @@
-import { fetchCategories } from '../services/api';
+
 
 export async function headerMenuItems() {
-  const categories = await fetchCategories(1, 10);
-
-  const limitedCategories = categories.slice(0, 10);
-
+  
   const headerMenuItems = [
     {
       label: 'Shop',

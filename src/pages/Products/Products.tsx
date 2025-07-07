@@ -23,7 +23,7 @@ import CollapsibleSection from '../../components/PageComponents/Sidebar/ProfileS
 import ProductListSidebar from '../../components/PageComponents/ProductListSidebar';
 
 const MainContent: React.FC = () => {
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [viewType, setViewType] = useState<'list' | 'grid'>('list');
   const [orderBy, setOrderBy] = useState('id');
@@ -321,20 +321,17 @@ const MainContent: React.FC = () => {
         const filterToRemove = prevFilters.find((f) => f.id === filterId);
 
         if (filterToRemove?.type === 'categories') {
-          // Remove the category and all its subcategories
           return prevFilters.filter(
             (f) => f.id !== filterId && !(f.type === 'subcategories')
           );
         }
 
         if (filterToRemove?.type === 'locations') {
-          // Remove the location and all its sublocations
           return prevFilters.filter(
             (f) => f.id !== filterId && !(f.type === 'sublocations')
           );
         }
 
-        // Remove the filter
         return prevFilters.filter((f) => f.id !== filterId);
       });
     };
@@ -344,6 +341,7 @@ const MainContent: React.FC = () => {
         filter.type === 'price' || filter.type === 'query'
           ? []
           : dataSets[filter.type] || [];
+
       const name =
         dataSet.find((item) => item.id === filter.id)?.name ||
         String(filter.id);
@@ -361,7 +359,7 @@ const MainContent: React.FC = () => {
         </li>
       );
     });
-  });
+  }, [filters, categories, subCategories, locations, subLocations, setFilters]);
 
   return (
     <>

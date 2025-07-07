@@ -7,18 +7,6 @@ import { fetchOrders, fetchAllReviews } from '../services/apiProducts';
 import { fetchVisitHistory } from '../services/api';
 import SummaryCard from '../components/PageComponents/Dashboard/SummeryCard';
 
-interface Visit {
-  id: number;
-  timestamp: string;
-  item_type: string;
-  item_id: number;
-  product?: {
-    title: string;
-    slug: string;
-    price: string;
-    image?: string;
-  };
-}
 
 export default function AutomotiveDashboard() {
   const { user } = useAuth();
@@ -50,7 +38,7 @@ export default function AutomotiveDashboard() {
     (async () => {
       try {
         const history = await fetchVisitHistory();
-        const recent = history.slice(0, 5).map((v) => ({
+        const recent = history.slice(0, 5).map((v: { item_id: any; product: { title: any; slug: any; image: any; }; }) => ({
           id: v.item_id,
           title: v.product?.title || `Product #${v.item_id}`,
           slug: v.product?.slug || String(v.item_id),

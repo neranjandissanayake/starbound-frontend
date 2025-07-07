@@ -14,7 +14,7 @@ const PostList: React.FC = () => {
   const [contentType, setContentType] = useState<string>('');
   const [nonTrashedPosts, setNonTrashedPosts] = useState<Post[]>([]);
   const [trashedPosts, setTrashedPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [nonDeletedCurrentPage, setNonDeletedCurrentPage] = useState<number>(1);
   const [deletedCurrentPage, setDeletedCurrentPage] = useState<number>(1);

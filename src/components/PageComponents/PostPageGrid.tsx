@@ -30,7 +30,18 @@ const useForumPosts = (
   });
 
   const matchedType = useMemo(
-    () => contentTypes?.find((ct: any) => ct.id === contentTypeId),
+    () => {
+      if (Array.isArray(contentTypes)) {
+        return contentTypes.find((ct: any) => ct.id === contentTypeId);
+      }
+      // If contentTypes is an object, convert to array and find
+      if (contentTypes && typeof contentTypes === 'object') {
+        return Object.values(contentTypes).find(
+          (ct: any) => ct.id === contentTypeId
+        );
+      }
+      return undefined;
+    },
     [contentTypes, contentTypeId]
   );
 

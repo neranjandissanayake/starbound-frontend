@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signin as signinApi } from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import LogoIcon from '../components/UI/Icons/Logo';
 import UserIcon from '../components/UI/Icons/User';
 import EyeIcon from '../components/UI/Icons/Eye';
 import GoogleIcon from '../components/UI/Icons/Google';

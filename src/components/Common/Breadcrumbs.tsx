@@ -1,4 +1,3 @@
-import { slugify } from '../../helpers/common';
 import { Post, Product } from '../../types/types';
 import { useLocation } from 'react-router-dom';
 

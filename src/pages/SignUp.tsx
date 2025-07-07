@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signup } from '../services/api';
-import LogoIcon from '../components/UI/Icons/Logo';
 import UserIcon from '../components/UI/Icons/User';
 import EyeIcon from '../components/UI/Icons/Eye';
 import GoogleIcon from '../components/UI/Icons/Google';

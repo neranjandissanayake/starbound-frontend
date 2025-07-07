@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import MenuIcon from '../../UI/Icons/Menu';
-import UserIcon from '../../UI/Icons/User';
 import { useAuth } from '../../../context/AuthContext';
 import SideBarMobile from '../SideBarMobile';
 

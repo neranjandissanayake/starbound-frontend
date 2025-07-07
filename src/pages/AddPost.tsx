@@ -35,7 +35,7 @@ const AddPost: React.FC = () => {
   const { user } = useAuth(); // Use useAuth hook to get the current user
   const { contentTypes, loading: contentLoading } = useContent(); // Get contentTypes from context
 
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentPage] = useState<number>(1);
   const [pageSize] = useState<number>(10);
   const [contentTypeId, setContentTypeId] = useState<number>();
   const [contentType, setContentType] = useState<string>('');
