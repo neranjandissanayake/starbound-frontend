@@ -12,7 +12,7 @@ export default defineConfig({
     port: parseInt(process.env.VITE_PORT || '3000'), // Use environment variable for port or default to 3000
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
   resolve: {
     alias: {
