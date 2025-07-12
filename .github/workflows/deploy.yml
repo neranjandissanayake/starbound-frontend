@@ -35,4 +35,5 @@ jobs:
 
       - name: Sync files to GCS bucket
         run: |
-          gsutil -m rsync -r ./out gs://logivis
+          gsutil -m rsync -r ./out gs://logivis/out
+
