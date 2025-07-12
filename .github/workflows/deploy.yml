@@ -23,8 +23,8 @@ jobs:
       run: |
         ssh -i ~/.ssh/id_ed25519 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
           set -e
-          cd /root/starbound-frontend || git clone https://github.com/neranjandissanayake/starbound-frontend.git /root/starbound-frontend
-          cd /root/starbound-frontend
+          cd /var/www/starbound/starbound-frontend || git clone https://github.com/neranjandissanayake/starbound-frontend.git /var/www/starbound/starbound-frontend
+          cd /var/www/starbound/starbound-frontend
           git pull origin main
           npm install
           npm run build
