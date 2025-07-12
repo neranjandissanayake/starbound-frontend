@@ -24,7 +24,7 @@ jobs:
       - name: Build and Export
         run: |
           npm run build
-          npm run export
+
 
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v1
